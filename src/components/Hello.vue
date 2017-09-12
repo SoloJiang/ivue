@@ -9,6 +9,7 @@
         <button>确定</button>
       </div>
     </s-dialog>
+    <button @click="showMessage">Message测试</button>
   </div>
 </template>
 
@@ -23,6 +24,11 @@ export default {
   },
   components: {
     "s-dialog": dialog 
+  },
+  methods: {
+    showMessage () {
+      this.$message('测试')
+    }
   }
 }
 </script>

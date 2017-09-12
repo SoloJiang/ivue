@@ -60,24 +60,24 @@
 </script>
 
 <style lang="stylus" scoped>
+  common()
+    top 0px
+    left 0px
+    bottom 0px
+    right 0px
+
   .dialog-leave-active
     opacity 0
     transition opacity .8s ease-out
   .dialog
     position fixed
-    top 0px
-    left 0px
-    bottom 0px
-    right 0px
     z-index 100
+    common()
     .dialog_drop
       position absolute
-      top 0px
-      left 0px
-      bottom 0px
-      right 0px
       z-index 0
       background rgba(0,0,0,.65)
+      common()
     .close
       z-index 1
       color #ffffff
@@ -88,11 +88,9 @@
       font-size 40px
       cursor pointer
     .dialog_leave
-      transform translateY(0)
       animation leave .8s ease forwards
     .dialog_enter
-      transform translateY(100px)
-      animation wrapper .8s ease forwards
+      animation enter .8s ease forwards
     .dialog_wrapper
       z-index 1
       position relative
@@ -115,24 +113,20 @@
         margin 40px 0
       .dialog_footer
         margin-top 30px
-  @keyframes wrapper {
-    from {
-      opacity 0
-    }
-    to {
+  @keyframes leave
+    from
       opacity 1
       transform translateY(0)
-    }
-  }
-  @keyframes leave {
-    from {
-      opacity 1
-    }
-    to {
+    to
       opacity 0
       transform translateY(100px)
-    }
-  }
+  @keyframes enter
+    from
+      opacity 0
+      transform translateY(100px)
+    to
+      opacity 1
+      transform translateY(0)
 </style>
 
 
