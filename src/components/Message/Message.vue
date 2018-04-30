@@ -6,25 +6,25 @@
   </transition>
 </template>
 <script type="text/javascript">
-  export default {
-    name: 'kiko-message',
-    data () {
-     return {
+export default {
+  name: 'kiko-message',
+  data() {
+    return {
       message: '',
       time: 3000,
       isShow: true
     }
   },
-  mounted () {
+  mounted() {
     this.close()
   },
   methods: {
-    close () {
-      var that = this
-      window.setTimeout(function() {
-        that.isShow = false
-        }, this.time);
-      }
+    close() {
+      // var that = this
+      // window.setTimeout(function() {
+      //   that.isShow = false
+      // }, this.time)
     }
   }
+}
 </script>

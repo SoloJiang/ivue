@@ -12,7 +12,7 @@ Message.installMessage = function(options) {
     }
   }
   var message = Vue.extend(Message)
-
+  console.log(message)
   var component = new message({
     data: options
   }).$mount()
