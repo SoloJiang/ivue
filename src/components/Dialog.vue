@@ -1,6 +1,6 @@
 <template>
   <transition name="dialog">
-    <div class="dialog" @click="closeModal">
+    <div class="dialog" @click="closeModal" v-show="visible">
       <div class="dialog_drop" ref="others"></div>
       <div class="close" @click="close" :class="leave ? 'dialog_leave' : 'dialog_enter'">×</div>
       <div class="dialog_wrapper" :class="leave ? 'dialog_leave' : 'dialog_enter'">
